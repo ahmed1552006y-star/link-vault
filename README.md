@@ -1,16 +1,13 @@
-# React + Vite
+# Link Vault
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web application for saving, organizing, and managing links efficiently.
 
-Currently, two official plugins are available:
+## Tech Stack & Libraries Purpose
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **react-router-dom**: Manages client-side routing and navigation between pages (such as Login, Dashboard, and link categories) without full-page reloads.
+- **axios**: Handles HTTP requests to communicate with the backend API for fetching, creating, updating, and deleting links, including token attachment via interceptors.
+- **zustand**: Provides lightweight global state management for authenticated user state, saved links list, and active search/filter states.
+- **formik**: Manages form states, input handling, and submission workflows for adding/editing links and authentication forms.
+- **yup**: Defines validation schemas integrated with Formik to enforce valid URL formats and required fields before submission.
+- **tailwindcss**: Utility-first CSS framework configured with centralized design tokens in `src/index.css` to ensure consistent styling with zero hardcoded values.
+- **react-icons**: Provides clean, scalable UI icons for actions like copying, editing, deleting, and categorizing links.
